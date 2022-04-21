@@ -1,0 +1,11 @@
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+
+@Entity("tablename")
+export class ETableName{
+
+    @PrimaryGeneratedColumn()
+    primaryKey:number;
+
+    @Column()
+    columnName:string
+}
