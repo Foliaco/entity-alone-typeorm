@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { getTable } = require('./sql/Tables');
 
 async function main(){

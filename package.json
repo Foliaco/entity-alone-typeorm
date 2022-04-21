@@ -1,8 +1,9 @@
 {
-  "name": "entity-alone",
+  "name": "vigilia-entity",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generar entidades simples para typeorm",
   "main": "index.js",
+  "bin": "index.js",
   "scripts": {
     "start":"node index"
   },
