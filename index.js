@@ -4,6 +4,7 @@ const { getTable } = require('./sql/Tables');
 async function main(){
     let arr=process.argv[process.argv.length-1].split('%');
     //host database username password port 
+    //npm start src localhost%vigilia_domicilios%root%null%3306
     let ruta=process.argv[process.argv.length-2];
     let host=arr[0];
     let database=arr[1];
