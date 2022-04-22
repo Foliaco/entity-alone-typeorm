@@ -3,13 +3,13 @@ const path=require('path');
 const { GenericEntity, GenericColumn } = require('../code/Entity');
 const Connection = require("../database/DB")
 const getTable=async(config,ruta)=>{
-
+    console.log(__dirname)
     try{
         let con=await Connection({host:config.host,database:config.database,username:config.username,password:config.password,port:config.port})
         let res=await con.promise().query(`SHOW FULL TABLES FROM ${config.database}`);
         let tables=res[0];
-        if(!fs.existsSync(path.join(__dirname,`${ruta}/Entitys`))){
-            fs.mkdirSync(path.join(__dirname,`${ruta}/Entitys`))
+        if(!fs.existsSync(path.join(__dirname,`./${ruta}/Entitys`))){
+            fs.mkdirSync(path.join(__dirname,`./${ruta}/Entitys`))
         }
         console.log('Creando la carpeta Entity en '+path.join(__dirname,ruta))
         tables.forEach(async(e)=>{
